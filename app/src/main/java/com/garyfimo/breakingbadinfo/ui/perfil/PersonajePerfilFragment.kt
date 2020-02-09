@@ -1,6 +1,7 @@
 package com.garyfimo.breakingbadinfo.ui.perfil
 
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
 import com.garyfimo.breakingbadinfo.R
 import com.garyfimo.breakingbadinfo.data.personaje.Personaje
 import com.garyfimo.breakingbadinfo.ui.base.LiveDataBase
@@ -88,9 +92,31 @@ class PersonajePerfilFragment : ScopedFragment(), KodeinAware {
 
     private fun updateScreenState(personajeState: LiveDataBase.ScreenState) {
         when (personajeState) {
-            LiveDataBase.ScreenState.Cargando -> Log.d("LOOOOOOG", "Cargando")
-            LiveDataBase.ScreenState.NoCargando -> Log.d("LOOOOOOG", "No cargando")
+            LiveDataBase.ScreenState.Cargando -> {
+                mostrarCargando()
+                ocultarDatos()
+            }
+            LiveDataBase.ScreenState.NoCargando -> {
+                ocultarCargando()
+            }
+            LiveDataBase.ScreenState.Exito -> mostrarDatos()
         }
+    }
+
+    private fun mostrarDatos() {
+        groupDatos?.visibility = View.VISIBLE
+    }
+
+    private fun ocultarCargando() {
+        groupCargando?.visibility = View.GONE
+    }
+
+    private fun ocultarDatos() {
+        groupDatos?.visibility = View.GONE
+    }
+
+    private fun mostrarCargando() {
+        groupCargando?.visibility = View.VISIBLE
     }
 
     private fun updatePersonajeUI(personaje: Personaje) {

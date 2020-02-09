@@ -32,6 +32,7 @@ class PersonajePerfilViewModel(
                 .let {
                     _personajeState.value = LiveDataBase.ScreenState.NoCargando
                     _personaje.value = it
+                    _personajeState.value = LiveDataBase.ScreenState.Exito
                 }
         } catch (ex: Exception) {
             _personajeState.value = LiveDataBase.ErrorState.ErrorControlado(ex.message!!)

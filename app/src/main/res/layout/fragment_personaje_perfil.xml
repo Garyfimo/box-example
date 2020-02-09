@@ -32,6 +32,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/gdlBackground" />
 
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/ivFotoPerfilCargando"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@color/colorPrimaryAplha"
+        app:civ_border_color="#3f51b5"
+        app:civ_border_width="4dp"
+        app:layout_constraintBottom_toBottomOf="@id/gdlBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gdlBackground" />
+
     <TextView
         android:id="@+id/tvTituloNombre"
         android:layout_width="wrap_content"
@@ -42,15 +54,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ivFotoPerfil" />
 
+    <View
+        android:id="@+id/viewTituloNombreCargando"
+        android:layout_width="55dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/silver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivFotoPerfilCargando" />
+
     <TextView
         android:id="@+id/tvNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/tvTituloNombre"
         app:layout_constraintTop_toBottomOf="@id/tvTituloNombre"
         tools:text="Walter White" />
+
+    <View
+        android:id="@+id/viewNombreCargando"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/asbestos"
+        app:layout_constraintStart_toStartOf="@id/viewTituloNombreCargando"
+        app:layout_constraintTop_toBottomOf="@id/viewTituloNombreCargando" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gdlVertical"
@@ -58,7 +90,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.65" />
-
 
     <TextView
         android:id="@+id/tvTituloApodo"
@@ -68,16 +99,33 @@
         app:layout_constraintStart_toStartOf="@id/gdlVertical"
         app:layout_constraintTop_toTopOf="@id/tvTituloNombre" />
 
+    <View
+        android:id="@+id/viewTituloApodoCargando"
+        android:layout_width="50dp"
+        android:layout_height="16dp"
+        android:background="@color/silver"
+        app:layout_constraintStart_toStartOf="@id/gdlVertical"
+        app:layout_constraintTop_toTopOf="@id/viewTituloNombreCargando" />
+
     <TextView
         android:id="@+id/tvApodo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/tvTituloApodo"
         app:layout_constraintTop_toBottomOf="@id/tvTituloApodo"
         tools:text="Heissenberg" />
 
+    <View
+        android:id="@+id/viewApodoCargando"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/asbestos"
+        app:layout_constraintStart_toStartOf="@id/viewTituloApodoCargando"
+        app:layout_constraintTop_toBottomOf="@id/viewTituloApodoCargando" />
 
     <TextView
         android:id="@+id/tvTituloCumpleanios"
@@ -88,15 +136,34 @@
         app:layout_constraintStart_toStartOf="@id/tvTituloNombre"
         app:layout_constraintTop_toBottomOf="@id/tvNombre" />
 
+    <View
+        android:id="@+id/viewTituloCumpleaniosCargando"
+        android:layout_width="150dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/silver"
+        app:layout_constraintStart_toStartOf="@id/viewTituloNombreCargando"
+        app:layout_constraintTop_toBottomOf="@id/viewNombreCargando" />
+
     <TextView
         android:id="@+id/tvCumpleanios"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@id/tvTituloNombre"
         app:layout_constraintTop_toBottomOf="@id/tvTituloCumpleanios"
         tools:text="09-07-1958" />
+
+    <View
+        android:id="@+id/viewCumpleaniosCargando"
+        android:layout_width="90dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/asbestos"
+        app:layout_constraintStart_toStartOf="@id/viewTituloNombreCargando"
+        app:layout_constraintTop_toBottomOf="@id/viewTituloCumpleaniosCargando" />
 
     <TextView
         android:id="@+id/tvTituloEstado"
@@ -105,6 +172,14 @@
         android:text="@string/estado"
         app:layout_constraintStart_toStartOf="@id/gdlVertical"
         app:layout_constraintTop_toTopOf="@id/tvTituloCumpleanios" />
+
+    <View
+        android:id="@+id/viewTituloEstadoCargando"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:background="@color/silver"
+        app:layout_constraintStart_toStartOf="@id/gdlVertical"
+        app:layout_constraintTop_toTopOf="@id/viewTituloCumpleaniosCargando" />
 
     <TextView
         android:id="@+id/tvEstado"
@@ -116,12 +191,23 @@
         app:layout_constraintTop_toBottomOf="@id/tvTituloEstado"
         tools:text="Presumed dead" />
 
+    <View
+        android:id="@+id/viewEstadoCargando"
+        android:layout_width="140dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/asbestos"
+        app:layout_constraintStart_toStartOf="@id/viewTituloEstadoCargando"
+        app:layout_constraintTop_toBottomOf="@id/viewTituloEstadoCargando"
+        tools:text="Presumed dead" />
+
     <TextView
         android:id="@+id/tvTituloOcupacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="@string/ocupacion"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/tvTituloNombre"
         app:layout_constraintTop_toBottomOf="@id/tvTituloCumpleanios" />
 
@@ -131,10 +217,24 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@id/tvTituloNombre"
         app:layout_constraintTop_toBottomOf="@id/tvTituloOcupacion"
         tools:text="* High School Chemistry Teacher \n
                     * Meth King Pin" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ivFotoPerfil,tvTituloNombre,tvNombre,tvTituloApodo,tvApodo,tvTituloCumpleanios,tvCumpleanios,tvTituloEstado,tvEstado,btnAdivinar" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupCargando"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ivFotoPerfilCargando,viewTituloNombreCargando,viewNombreCargando,viewTituloApodoCargando,viewApodoCargando,viewTituloCumpleaniosCargando,viewCumpleaniosCargando,viewTituloEstadoCargando,viewEstadoCargando" />
 
     <Button
         android:id="@+id/btnAdivinar"
