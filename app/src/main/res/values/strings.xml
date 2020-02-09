@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Breaking Bad Info</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre">Nombre</string>
+    <string name="apodo">Apodo</string>
+    <string name="cumpleanios">Cumpleaños</string>
+    <string name="estado">Estado</string>
+    <string name="ocupacion">Ocupación</string>
+    <string name="adivinar">Adivinar</string>
+</resources>
