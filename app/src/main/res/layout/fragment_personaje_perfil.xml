@@ -228,7 +228,7 @@
         android:id="@+id/groupDatos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="ivFotoPerfil,tvTituloNombre,tvNombre,tvTituloApodo,tvApodo,tvTituloCumpleanios,tvCumpleanios,tvTituloEstado,tvEstado,btnAdivinar" />
+        app:constraint_referenced_ids="ivFotoPerfil,tvTituloNombre,tvNombre,tvTituloApodo,tvApodo,tvTituloCumpleanios,tvCumpleanios,tvTituloEstado,tvEstado" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/groupCargando"

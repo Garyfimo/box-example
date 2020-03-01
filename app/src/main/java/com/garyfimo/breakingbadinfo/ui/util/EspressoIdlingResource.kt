@@ -2,6 +2,7 @@ package com.garyfimo.breakingbadinfo.ui.util
 
 import androidx.test.espresso.IdlingResource
 
+
 object EspressoIdlingResource {
 
     private const val RESOURCE = "GLOBAL"

@@ -57,7 +57,6 @@ class PersonajePerfilFragment : ScopedFragment(), KodeinAware {
         viewModel.personajeState.observe(::getLifecycle, ::updatePersonajeStateUI)
         viewModel.personaje.observe(::getLifecycle, ::updatePersonajeUI)
         configurarClickListener()
-        getPersonaje()
     }
 
     private fun configurarClickListener() {
@@ -68,10 +67,6 @@ class PersonajePerfilFragment : ScopedFragment(), KodeinAware {
 
     private fun buscarOtroPersonajeRandom() {
         launch { viewModel.getPersonajeRandom() }
-    }
-
-    private fun getPersonaje() {
-        launch { viewModel.getPersonajePorId(personajeId.toString()) }
     }
 
     private fun updatePersonajeStateUI(personajeState: LiveDataBase) {
